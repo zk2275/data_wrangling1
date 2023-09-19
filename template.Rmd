@@ -95,3 +95,17 @@ pulse_df =
 
 
 
+# Export Data
+
+We have code that "cleans"
+
+```{r}
+litters_df_cleaned = 
+  read_csv(
+    "data_import_examples/FAS_litters.csv")
+
+janitor::clean_names(litters_df_cleaned)
+
+write_csv(litters_df_cleaned, "data_import_examples/litters_cleaned.csv")
+
+```
