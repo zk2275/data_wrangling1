@@ -34,7 +34,29 @@ litters_df =
   janitor::clean_names(litters_df)
 
 head(litters_df)
-
+tail(litters_df)
+str(litters_df)
 ```
+
+Import Pups dataset
+
+```{r}
+pups_df = 
+  read.csv("data_import_examples/FAS_pups.csv")
+
+pups_df = 
+  janitor::clean_names(pups_df)
+```
+
+Use the 'view' to get the entire dataset. Use the eval = False to mute the outcomes with function view.
+
+
+# SKIM
+
+```{r}
+skimr::skim(pups_df)
+```
+
+
 
 
