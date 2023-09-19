@@ -7,7 +7,7 @@ output: github_document
 
 ```{r}
 library(tidyverse)
-
+library(readr)
 ```
 
 
@@ -57,6 +57,41 @@ Use the 'view' to get the entire dataset. Use the eval = False to mute the outco
 skimr::skim(pups_df)
 ```
 
+# SKIP and SAVE the col_names(read_csv, needs the package readr)
+
+```{r}
+litters_df = 
+   read_csv(
+     "data_import_examples/FAS_litters.csv",
+     skip = 10, col_names = FALSE
+   )
+
+
+
+
+```
+
+# DATA TYPE
+
+```{r}
+litters_df = 
+  read_csv(
+    "data_import_examples/FAS_litters.csv",
+    col_types = 
+      cols(
+        `GD0 weight` = col_character()
+      ))
+
+
+```
+
+# IMPORT A SAS file
+
+```{r}
+library(haven)
+pulse_df = 
+  read_sas("data_import_examples/public_pulse_data.sas7bdat")
+```
 
 
 
