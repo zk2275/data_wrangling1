@@ -1,0 +1,8 @@
+---
+title: "try1"
+author: "Zhuodiao Kuang"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+
