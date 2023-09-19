@@ -16,7 +16,7 @@ Let's import litters. ---csv
 
 ```{r}
 litters_df = {
-  read.csv("C:/2023Fall/DS2023/data_wrangling1/data_import_examples/FAS_litters.csv")
+  read_csv("C:/2023Fall/DS2023/data_wrangling1/data_import_examples/FAS_litters.csv")
 }
 
 # I can also import the file from relative path.
@@ -42,7 +42,7 @@ Import Pups dataset
 
 ```{r}
 pups_df = 
-  read.csv("data_import_examples/FAS_pups.csv")
+  read_csv("data_import_examples/FAS_pups.csv")
 
 pups_df = 
   janitor::clean_names(pups_df)
